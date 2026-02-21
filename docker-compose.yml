@@ -1,6 +1,9 @@
 services:
   gemini-api:
-    image: cooooookk/gemini-business2api:latest
+    # image: cooooookk/gemini-business2api:latest
+    build: 
+      context: .           # 上下文目录，通常是当前目录
+      dockerfile: Dockerfile # 指定 Dockerfile 文件名（如果是默认的 Dockerfile 可省略）
     container_name: gemini-business2api
     ports:
       - "7860:7860"
